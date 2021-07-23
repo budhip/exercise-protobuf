@@ -1,0 +1,7 @@
+config_version: 3
+
+http:
+  rules:
+    - selector: proto.UserHandler.StoreUserData
+      post: /g/user/store-user-data
+      body: "*"

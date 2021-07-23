@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/budhip/exercise-user/user/delivery/proto";
+
+message StoreUserDataRequest {
+  string  name = 1;
+  string  email = 2;
+  string  address = 3;
+  string  phone_number = 4;
+}
+
+message StoreUserDataResponse {
+  uint64 id = 1;
+}
+
+service UserHandler {
+  rpc StoreUserData(StoreUserDataRequest) returns (StoreUserDataResponse) {};
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package grpc;
+
+option go_package = "github.com/budhip/exercise-user/common/grpc";
+
+message Error {
+  string code = 1;
+  string message = 2;
+  map<string,string> attributes = 3;
+}
